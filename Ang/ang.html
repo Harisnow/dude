@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="app1" ng-init="person = {fName: 'hari',lName : 'haran'}; capitals = [{ city: 'montgomery', state : 'alabama'},{city: 'June', state : 'Alaska'},{city: 'Phoe', state : 'Arizona'}]">
+  <head>
+  </head>
+  <body>
+  <div ng-controller="ctrl1">
+      
+        <span>Values:</span>
+        <input type="text" ng-model="first" />
+        <input type="text" ng-model="second" />
+
+        <button ng-click="updateValue()">Sum</button>
+        <br>
+
+        {{calc}}
+
+        <p>5 + 5 = {{5+5}}</p>
+
+        <p>your first value is {{first}}</p>
+
+        <p>your second value is
+        <span data-ng-bind="second"></span>
+        </p>
+
+      <p>{{person.fName + "" + person.lName}} you entered {{first + " and " + second}}</p>
+        
+      </p>
+
+      <ul>
+            <li ng-repeat="capital in capitals">
+              {{'City: ' + capital.city + ', State: ' + capital.state}}
+            </li>        
+      </ul>
+  
+
+
+  </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="exam1.js"></script>
+  </body>
+</html>

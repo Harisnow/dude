@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="app3" ng-cloak>
+<head>
+	<title>ang 3</title>
+	      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="exam3.js"></script>
+</head>
+<body>
+
+<div id="groc" ng-controller="gList">
+
+		<h3 class="ListTitle">{{groc.length}} Groc to get</h3>
+
+		<h3 class="ListTitle">
+		<span data-ng-bind="groc.length"></span>
+		Groc to get</h3>
+
+		<ol style="margin:0 0 -15px 0;">
+		<li>{{groc[0].item}}</li>
+			</ol>
+
+			<ol start="0"  >
+			<li ng-repeat="gokul in groc" ng-if="$index > 0">
+	
+			</li>
+			</ol>
+			<table>
+				<tr ng-repeat-start="goo in groc">
+				<td>
+					{{goo.item}}
+				</td>
+				<tr ng-repeat-end>
+				<td>
+					{{goo.purchased}}
+				</td>
+	</table>
+
+<label>Change 1st item:</label>
+<input ng-model="groc[0].item" />
+
+<h3>Grocery list</h3>
+<div ng-include="'ang4.html'"></div>
+
+<label>
+<input type="checkbox" ng-model="showList">
+Show UL
+</label>
+<ng-include src="getList()"></ng-include>
+
+<label>Type a number (1 to 4):
+<input type="text" ng-model="someNumber"/>
+</label>
+
+<div ng-switch="someNumber" >
+<p ng-switch-when="1">dude</p>	
+<p ng-switch-when="2">bro</p>	
+<p ng-switch-when="3">mate</p>	
+<p ng-switch-when="4">man
+</p>	
+<p ng-switch-default="1">You Fool!!</p>	
+
+</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>

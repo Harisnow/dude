@@ -1,0 +1,37 @@
+
+<!doctype html>
+<html ng-app="app8" ng-cloak>
+  <head>
+    <title>AngularJS </title>
+    <style>
+    [ng\:cloak], [ng-cloak], .ng-cloak {
+      display: none;
+    }
+    </style>
+  </head>
+  <body>
+
+    <!-- Filters transform data in the view without altering it in the scope using the pipe character -->
+    <div ng-controller="mainCtrl">
+     <!-- Custom Filter
+      Different unicode characters are returned based on if item.rain
+      has the value of true or false -->
+      <p>
+        <ul>
+          <li ng-repeat="item in cars">
+            {{item.name + " : "}} {{item.make | color}}
+          </li>
+        </ul>
+      </p>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="exam4.js"></script>
+
+    <!-- Needed for custom Filter -->
+    <script src="filters.js"></script>
+
+  </body>
+</html>
+
